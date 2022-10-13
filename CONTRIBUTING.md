@@ -1,6 +1,6 @@
 # Contributing
 
-Interested in contributing to CC-Template-Repository? Want to report a bug?
+Interested in contributing to CC-Talking-Heads? Want to report a bug?
 Have a question? Before you do, please read the following guidelines.
 
 ## Submission context
@@ -19,7 +19,7 @@ to the [issue tracker][2] in our GitHub repository. Even better, you can submit
 a Pull Request with a fix. However, before doing so, please read the
 [submission guidelines][3].
 
-[2]: https://github.com/ManticoreGamesInc/Bootcamp-Talking-Heads
+[2]: https://github.com/ManticoreGamesInc/CC-Talking-Heads
 [3]: #submission-guidelines
 
 ### Missing a feature?
@@ -71,7 +71,7 @@ go ahead.
    are no errors. This is a mandatory requirement for your PR to get accepted.
 
 3. **Pull Request**: After making sure everything passes, commit your changes,
-   push your branch to GitHub and send a PR to `ManticoreGamesInc/Bootcamp-Talking-Heads:main`.
+   push your branch to GitHub and send a PR to `ManticoreGamesInc/CC-Talking-Heads:main`.
    If we suggest changes, make the required updates, rebase your branch and push the
    changes to your GitHub repository, which will automatically update your PR.
 
