@@ -103,7 +103,7 @@ local function play_audio(asset)
 	audio:Play()
 end
 
-local function play_talking_head(key, world_actor)
+local function play_talking_head(key, world_actor, world_delay)
 	if(Object.IsValid(actor)) then
 		actor:Destroy()
 		capture:Release()
@@ -139,13 +139,14 @@ local function play_talking_head(key, world_actor)
 				end
 
 				actor.animationStance = row.Stance
-
-				if(Object.IsValid(world_actor)) then
-					world_actor.animationStance = row.Stance
-				end
-
 				play_audio(row.Audio)
 			end)
+
+			if(Object.IsValid(world_actor)) then
+				Task.Spawn(function()
+					world_actor.animationStance = row.Stance
+				end, world_delay)
+			end
 		elseif(string.len(row.Animation) > 0) then
 			Task.Spawn(function()
 				if(row.AnimationDelay > 0) then
@@ -160,6 +161,12 @@ local function play_talking_head(key, world_actor)
 
 				play_audio(row.Audio)
 			end)
+
+			if(Object.IsValid(world_actor)) then
+				Task.Spawn(function()
+					world_actor:PlayAnimation(row.Animation, { shouldLoop = row.AnimationLoop })
+				end, world_delay)
+			end
 		else
 			play_audio(row.Audio)
 		end
@@ -211,12 +218,12 @@ function Tick(dt)
 	end
 end
 
-local function add_to_queue(key, actor)
+local function add_to_queue(key, actor, delay)
 	queue:push(function()
-		play_talking_head(key, actor)
+		play_talking_head(key, actor, delay)
 	end)
 end
 
-Events.Connect("Talking.Head", add_to_queue)
+Events.Connect("Talking.Heads", add_to_queue)
 
 Input.actionPressedEvent:Connect(on_action_pressed)

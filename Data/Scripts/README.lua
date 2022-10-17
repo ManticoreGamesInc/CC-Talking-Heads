@@ -1,19 +1,19 @@
 --[[
-  _______    _ _    _               _    _                _     
- |__   __|  | | |  (_)             | |  | |              | |    
-    | | __ _| | | ___ _ __   __ _  | |__| | ___  __ _  __| |___ 
+  _______    _ _    _               _    _                _
+ |__   __|  | | |  (_)             | |  | |              | |
+    | | __ _| | | ___ _ __   __ _  | |__| | ___  __ _  __| |___
     | |/ _` | | |/ / | '_ \ / _` | |  __  |/ _ \/ _` |/ _` / __|
     | | (_| | |   <| | | | | (_| | | |  | |  __/ (_| | (_| \__ \
     |_|\__,_|_|_|\_\_|_| |_|\__, | |_|  |_|\___|\__,_|\__,_|___/
-                             __/ |                              
-                            |___/ 
+                             __/ |
+                            |___/
 -----------------------------------------------------------------
 
 The Talking Heads component allows you to have animated actors show up in the UI that displays some dialogue
 to the player. This can be far more interesting to the player, as the actor can be animated to show emotion
 depending on what they are saying in the message.
 
-For example, if a player interacts with an NPC and tells a joke to the player. The actor in the UI could be 
+For example, if a player interacts with an NPC and tells a joke to the player. The actor in the UI could be
 laughing while telling the joke.
 
 -----------------------------------------------------------------------------------------------------------------
@@ -22,8 +22,11 @@ laughing while telling the joke.
 How to use
 ==========
 
-Drag the Talking Heads template into the Hierarchy. The template comes with an example included so you can test 
+Drag the Talking Heads template into the Hierarchy. The template comes with an example included so you can test
 the component out. The example template that is included can be removed from the Hierarchy if needed.
+
+For easy interaction with an NPC, there is a trigger template that can be dropped in and customized to make
+interacting easier so no scripting is required.
 
 The root of the template in the hierarchy has custom properties to customize the component.
 
@@ -78,7 +81,7 @@ To call an actor entry, you can pass the key for the entry when broadcasting to 
 
 For example, to call the entry `Karl Laugh`, a broadcast like this is done:
 
-`Events.Broadcast("Talking.Head", "Karl Laugh")`
+`Events.Broadcast("Talking.Heads", "Karl Laugh")`
 
 To create actor entries, there is a data table in the Talking Heads folder in Project Content. It contains 2 examples
 already added.

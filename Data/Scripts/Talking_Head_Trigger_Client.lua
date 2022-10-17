@@ -8,11 +8,12 @@ local KEY = ROOT:GetCustomProperty("Key")
 local DISABLE_TRIGGER = ROOT:GetCustomProperty("DisableTrigger")
 local RESOURCE_KEY = ROOT:GetCustomProperty("ResourceKey")
 local RESOURCE_AMOUNT = ROOT:GetCustomProperty("ResourceAmount")
+local ANIMATION_DELAY = ROOT:GetCustomProperty("AnimationDelay")
 
 local function on_trigger_interacted(trigger, other)
 	if(other == Game.GetLocalPlayer()) then
 		if(Object.IsValid(ACTOR) and string.len(KEY) > 0) then
-			Events.Broadcast("Talking.Head", KEY, ACTOR)
+			Events.Broadcast("Talking.Heads", KEY, ACTOR, ANIMATION_DELAY)
 		end
 
 		if(DISABLE_TRIGGER) then

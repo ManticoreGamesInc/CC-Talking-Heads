@@ -42,17 +42,5 @@ Assets {
       VirtualFolderPath: "Talking Heads"
       PlatformAssetType: 29
     }
-    Folders {
-      VirtualFolderPath: "Resource Display"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Resource Display"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Resource Display"
-      PlatformAssetType: 31
-    }
   }
 }

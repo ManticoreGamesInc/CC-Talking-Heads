@@ -7,7 +7,7 @@ Assets {
       RootId: 8591942170561853272
       Objects {
         Id: 8591942170561853272
-        Name: "Talking Head Trigger"
+        Name: "Talking Heads Trigger"
         Transform {
           Scale {
             X: 1
@@ -41,6 +41,10 @@ Assets {
             Int: 0
           }
           Overrides {
+            Name: "cs:AnimationDelay"
+            Float: 0
+          }
+          Overrides {
             Name: "cs:Actor:tooltip"
             String: "The world actor that will also animated if required."
           }
@@ -59,6 +63,10 @@ Assets {
           Overrides {
             Name: "cs:ResourceAmount:tooltip"
             String: "The amount of resource the player will receive. This can be negative to remove from the resource."
+          }
+          Overrides {
+            Name: "cs:AnimationDelay:tooltip"
+            String: "The delay of the animation."
           }
         }
         Collidable_v2 {
@@ -133,7 +141,7 @@ Assets {
       }
       Objects {
         Id: 1899703622804290354
-        Name: "Talking_Head_Trigger_Client"
+        Name: "Talking_Heads_Trigger_Client"
         Transform {
           Location {
           }

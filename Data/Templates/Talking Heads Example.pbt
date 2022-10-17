@@ -149,7 +149,7 @@ Assets {
       }
       Objects {
         Id: 6184921341997881887
-        Name: "Talking Head Trigger"
+        Name: "Talking Heads Trigger"
         Transform {
           Scale {
             X: 1
@@ -165,15 +165,6 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         TemplateInstance {
-          ParameterOverrideMap {
-            key: 1899703622804290354
-            value {
-              Overrides {
-                Name: "Name"
-                String: "Talking_Heads_Trigger_Client"
-              }
-            }
-          }
           ParameterOverrideMap {
             key: 8591942170561853272
             value {
@@ -192,28 +183,6 @@ Assets {
                 Name: "Rotation"
                 Rotator {
                 }
-              }
-              Overrides {
-                Name: "cs:Actor"
-                ObjectReference {
-                  SubObjectId: 12240025366981292727
-                }
-              }
-              Overrides {
-                Name: "cs:Key"
-                String: "Karl Laugh"
-              }
-              Overrides {
-                Name: "cs:DisableTrigger"
-                Bool: true
-              }
-              Overrides {
-                Name: "cs:ResourceKey"
-                String: "Coins"
-              }
-              Overrides {
-                Name: "cs:ResourceAmount"
-                Int: 10
               }
             }
           }
