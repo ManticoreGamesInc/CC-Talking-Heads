@@ -19,6 +19,7 @@ Assets {
         ChildIds: 712408138904277471
         ChildIds: 6427079371192021574
         ChildIds: 130685224475617959
+        ChildIds: 5338939922589034251
         ChildIds: 13585912603947415139
         UnregisteredParameters {
           Overrides {
@@ -306,7 +307,7 @@ Assets {
       }
       Objects {
         Id: 12733198281631795940
-        Name: "Talkings_Head_Client"
+        Name: "Talking_Heads_Client"
         Transform {
           Location {
           }
@@ -1143,6 +1144,9 @@ Assets {
           ShadowBias: 0.4
           ShadowSlopeBias: 0.6
         }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
@@ -1322,6 +1326,79 @@ Assets {
         IsReplicationEnabledByDefault: true
       }
       Objects {
+        Id: 5338939922589034251
+        Name: "Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12599583554673959654
+        ChildIds: 16162616739401449527
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+          Type: Server
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 16162616739401449527
+        Name: "Talking_Heads_Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5338939922589034251
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 10028733089879282645
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
         Id: 13585912603947415139
         Name: "Talking Heads Example"
         Transform {
@@ -1332,6 +1409,12 @@ Assets {
           }
         }
         ParentId: 12599583554673959654
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
         TemplateInstance {
           ParameterOverrideMap {
             key: 6148971291182092557
@@ -1347,6 +1430,24 @@ Assets {
                   Y: -250
                   Z: 100
                 }
+              }
+              Overrides {
+                Name: "Rotation"
+                Rotator {
+                }
+              }
+            }
+          }
+          ParameterOverrideMap {
+            key: 8554781000244983401
+            value {
+              Overrides {
+                Name: "cs:ResourceKey"
+                String: "Coins"
+              }
+              Overrides {
+                Name: "cs:ResourceAmount"
+                Int: 10
               }
             }
           }
@@ -1415,6 +1516,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 118
+  SerializationVersion: 119
+  DirectlyPublished: true
   VirtualFolderPath: "Talking Heads"
 }

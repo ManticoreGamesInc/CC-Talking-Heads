@@ -7,7 +7,7 @@ Assets {
       RootId: 6148971291182092557
       Objects {
         Id: 6148971291182092557
-        Name: "Example"
+        Name: "Talking Heads Example"
         Transform {
           Scale {
             X: 1
@@ -60,8 +60,7 @@ Assets {
         }
         ParentId: 6148971291182092557
         ChildIds: 12240025366981292727
-        ChildIds: 12827048754290910430
-        ChildIds: 13592631703803062224
+        ChildIds: 6184921341997881887
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -149,62 +148,9 @@ Assets {
         IsReplicationEnabledByDefault: true
       }
       Objects {
-        Id: 12827048754290910430
-        Name: "Trigger"
+        Id: 6184921341997881887
+        Name: "Talking Head Trigger"
         Transform {
-          Location {
-            X: 62.5
-            Z: 12.5
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.25
-            Y: 1
-            Z: 2.25
-          }
-        }
-        ParentId: 10298480963712012116
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Trigger {
-          Interactable: true
-          InteractionLabel: "Talk to Karl"
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:box"
-          }
-          InteractionTemplate {
-          }
-          BreadcrumbTemplate {
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-        IsReplicationEnabledByDefault: true
-      }
-      Objects {
-        Id: 13592631703803062224
-        Name: "Karl_Example_Client"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
           Scale {
             X: 1
             Y: 1
@@ -212,41 +158,69 @@ Assets {
           }
         }
         ParentId: 10298480963712012116
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Trigger"
-            ObjectReference {
-              SubObjectId: 12827048754290910430
-            }
-          }
-          Overrides {
-            Name: "cs:Karl"
-            ObjectReference {
-              SubObjectId: 12240025366981292727
-            }
-          }
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 1530981338773830924
+        TemplateInstance {
+          ParameterOverrideMap {
+            key: 1899703622804290354
+            value {
+              Overrides {
+                Name: "Name"
+                String: "Talking_Heads_Trigger_Client"
+              }
+            }
+          }
+          ParameterOverrideMap {
+            key: 8591942170561853272
+            value {
+              Overrides {
+                Name: "Name"
+                String: "Talking Heads Trigger"
+              }
+              Overrides {
+                Name: "Position"
+                Vector {
+                  X: 31.2500229
+                  Y: 1.14440918e-05
+                }
+              }
+              Overrides {
+                Name: "Rotation"
+                Rotator {
+                }
+              }
+              Overrides {
+                Name: "cs:Actor"
+                ObjectReference {
+                  SubObjectId: 12240025366981292727
+                }
+              }
+              Overrides {
+                Name: "cs:Key"
+                String: "Karl Laugh"
+              }
+              Overrides {
+                Name: "cs:DisableTrigger"
+                Bool: true
+              }
+              Overrides {
+                Name: "cs:ResourceKey"
+                String: "Coins"
+              }
+              Overrides {
+                Name: "cs:ResourceAmount"
+                Int: 10
+              }
+            }
+          }
+          TemplateAsset {
+            Id: 4096104390300429872
           }
         }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 7231402153591544660
@@ -515,7 +489,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 118
+  SerializationVersion: 119
   VirtualFolderPath: "Talking Heads"
   VirtualFolderPath: "Example"
 }

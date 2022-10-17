@@ -1,11 +1,11 @@
 Assets {
-  Id: 8417457865801319800
-  Name: "Talkings_Head_Client"
+  Id: 15568030236913952250
+  Name: "Talking_Head_Trigger_Client"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
     }
   }
-  SerializationVersion: 118
+  SerializationVersion: 119
   VirtualFolderPath: "Talking Heads"
 }

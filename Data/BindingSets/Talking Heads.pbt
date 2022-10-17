@@ -2,7 +2,7 @@ Assets {
   Id: 13967323995701093802
   Name: "Talking Heads"
   PlatformAssetType: 29
-  SerializationVersion: 118
+  SerializationVersion: 119
   VirtualFolderPath: "Talking Heads"
   BindingSetAsset {
     Bindings {

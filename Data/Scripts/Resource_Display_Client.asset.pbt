@@ -1,11 +1,11 @@
 Assets {
-  Id: 13842547444613038308
-  Name: "README"
+  Id: 15927504917943661865
+  Name: "Resource_Display_Client"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
     }
   }
   SerializationVersion: 119
-  VirtualFolderPath: "Talking Heads"
+  VirtualFolderPath: "Resource Display"
 }

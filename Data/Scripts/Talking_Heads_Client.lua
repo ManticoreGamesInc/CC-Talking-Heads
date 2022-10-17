@@ -58,9 +58,9 @@ local function parse_message(message)
 		{ replace = "{maxhitpoints}", with = LOCAL_PLAYER.maxHitPoints },
 		{ replace = "{kills}", with = LOCAL_PLAYER.kills },
 		{ replace = "{deaths}", with = LOCAL_PLAYER.deaths }
-	
+
 	}
-	
+
 	for _, r in pairs(replacements) do
 		message = string.gsub(message, r.replace, r.with)
 	end
@@ -103,7 +103,7 @@ local function play_audio(asset)
 	audio:Play()
 end
 
-local function play_talking_head(key)
+local function play_talking_head(key, world_actor)
 	if(Object.IsValid(actor)) then
 		actor:Destroy()
 		capture:Release()
@@ -132,13 +132,32 @@ local function play_talking_head(key)
 		local delay = false
 		local animation = nil
 
-		if(string.len(row.Animation) > 0) then
+		if(string.len(row.Stance) > 0) then
+			Task.Spawn(function()
+				if(row.AnimationDelay > 0) then
+					Task.Wait(row.AnimationDelay)
+				end
+
+				actor.animationStance = row.Stance
+
+				if(Object.IsValid(world_actor)) then
+					world_actor.animationStance = row.Stance
+				end
+
+				play_audio(row.Audio)
+			end)
+		elseif(string.len(row.Animation) > 0) then
 			Task.Spawn(function()
 				if(row.AnimationDelay > 0) then
 					Task.Wait(row.AnimationDelay)
 				end
 
 				actor:PlayAnimation(row.Animation, { shouldLoop = row.AnimationLoop })
+
+				if(Object.IsValid(world_actor)) then
+					world_actor:PlayAnimation(row.Animation, { shouldLoop = row.AnimationLoop })
+				end
+
 				play_audio(row.Audio)
 			end)
 		else
@@ -192,9 +211,9 @@ function Tick(dt)
 	end
 end
 
-local function add_to_queue(key)
+local function add_to_queue(key, actor)
 	queue:push(function()
-		play_talking_head(key)
+		play_talking_head(key, actor)
 	end)
 end
 

@@ -53,6 +53,28 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 7393853597570632325
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Talking Heads Example"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 550
+            Y: -250
+            Z: 100
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 12599583554673959654
       value {
         Overrides {
