@@ -1,13 +1,13 @@
 Assets {
   Id: 4096104390300429872
-  Name: "Talking Heads Trigger"
+  Name: "Talking Heads Interaction Trigger"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 8591942170561853272
       Objects {
         Id: 8591942170561853272
-        Name: "Talking Heads Trigger"
+        Name: "Talking Heads Interaction Trigger"
         Transform {
           Scale {
             X: 1
@@ -17,7 +17,7 @@ Assets {
         }
         ParentId: 2417156834947963766
         ChildIds: 12121593780141884516
-        ChildIds: 1899703622804290354
+        ChildIds: 9673951998236804592
         UnregisteredParameters {
           Overrides {
             Name: "cs:Actor"
@@ -140,8 +140,8 @@ Assets {
         IsReplicationEnabledByDefault: true
       }
       Objects {
-        Id: 1899703622804290354
-        Name: "Talking_Heads_Trigger_Client"
+        Id: 9673951998236804592
+        Name: "Talking_Heads_Interact_Trigger_Client"
         Transform {
           Location {
           }
@@ -166,6 +166,22 @@ Assets {
             ObjectReference {
               SubObjectId: 8591942170561853272
             }
+          }
+          Overrides {
+            Name: "cs:Trigger:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Trigger:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Root:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Root:ml"
+            Bool: false
           }
         }
         Collidable_v2 {

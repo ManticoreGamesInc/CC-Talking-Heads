@@ -1,13 +1,13 @@
 Assets {
-  Id: 11084919449917299669
+  Id: 9616824867024640312
   Name: "Karl"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 15695884564446591204
+      RootId: 8608362124223064040
       Objects {
-        Id: 15695884564446591204
-        Name: "Humanoid 2 Rig"
+        Id: 8608362124223064040
+        Name: "Karl"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12796764538676820289
+        ParentId: 2417156834947963766
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }

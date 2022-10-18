@@ -1438,37 +1438,6 @@ Assets {
               }
             }
           }
-          ParameterOverrideMap {
-            key: 8554781000244983401
-            value {
-              Overrides {
-                Name: "cs:Actor"
-                ObjectReference {
-                  SubObjectId: 11102772051977070911
-                }
-              }
-              Overrides {
-                Name: "cs:Key"
-                String: "Karl Laugh"
-              }
-              Overrides {
-                Name: "cs:DisableTrigger"
-                Bool: true
-              }
-              Overrides {
-                Name: "cs:ResourceKey"
-                String: "Coins"
-              }
-              Overrides {
-                Name: "cs:ResourceAmount"
-                Int: 10
-              }
-              Overrides {
-                Name: "cs:AnimationDelay"
-                Float: 1
-              }
-            }
-          }
           TemplateAsset {
             Id: 1335606734815499093
           }

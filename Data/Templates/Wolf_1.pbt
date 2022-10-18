@@ -1,13 +1,13 @@
 Assets {
-  Id: 8649996682719204220
+  Id: 1014417823171064538
   Name: "Wolf"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 2689875421928435355
+      RootId: 5172519690559211316
       Objects {
-        Id: 2689875421928435355
-        Name: "Wolf Rig"
+        Id: 5172519690559211316
+        Name: "Wolf"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12796764538676820289
+        ParentId: 14644548731576766326
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -45,7 +45,7 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 16447319053593114873
+              Id: 3851774598143128700
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -77,12 +77,12 @@ Assets {
       }
     }
     Assets {
-      Id: 16447319053593114873
-      Name: "Zombie Wolf Mob"
+      Id: 3851774598143128700
+      Name: "Wolf Mob"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_wolf_default_body_fantasy_002_ref"
+        AssetId: "npc_wolf_default_body_basic_001_ref"
       }
     }
     PrimaryAssetId {

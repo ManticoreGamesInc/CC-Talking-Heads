@@ -1,6 +1,6 @@
 Assets {
-  Id: 15568030236913952250
-  Name: "Talking_Head_Trigger_Client"
+  Id: 9859241474716524877
+  Name: "Talking_Heads_Overlap_Trigger_Client"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
