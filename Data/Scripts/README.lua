@@ -17,6 +17,11 @@ For example, if a player interacts with an NPC and tells a joke to the player. T
 laughing while telling the joke.
 
 -----------------------------------------------------------------------------------------------------------------
+====
+NOTE
+====
+
+If the Dependent folders are empty in Project Content under Imported Content for this component, save and reload the project to fix it.
 
 ==========
 How to use
