@@ -99,10 +99,6 @@ Assets {
             Float: 0.4
           }
           Overrides {
-            Name: "cs:StayDuraton"
-            Float: 6
-          }
-          Overrides {
             Name: "cs:WriteText"
             Bool: true
           }
@@ -141,10 +137,6 @@ Assets {
           Overrides {
             Name: "cs:OutDuration:tooltip"
             String: "The duration of the out animation."
-          }
-          Overrides {
-            Name: "cs:StayDuraton:tooltip"
-            String: "The duration for how long an entry will stay out."
           }
           Overrides {
             Name: "cs:WriteText:tooltip"
@@ -660,12 +652,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middleleft"
+                Value: "mc:euianchor:topleft"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middleleft"
+                Value: "mc:euianchor:topleft"
               }
             }
           }
@@ -1416,6 +1408,15 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         TemplateInstance {
+          ParameterOverrideMap {
+            key: 1870515411822008052
+            value {
+              Overrides {
+                Name: "cs:DisableTrigger"
+                Bool: false
+              }
+            }
+          }
           ParameterOverrideMap {
             key: 6148971291182092557
             value {

@@ -51,10 +51,6 @@ The duration of the in animation.
 
 The duration of the out animation.
 
-- StayDuration
-
-The duration for how long an entry will stay out.
-
 - WriteText
 
 If enabled, the text will be printed out 1 character at a time.
@@ -122,6 +118,10 @@ For example, the message could be: `Hello {name}, your current health is {hitpoi
 	- `{deaths}`
 	Total deaths the player as.
 
+- RandomMessages
+
+A data table of random messages this actor will pick from.
+
 - Actor
 
 The template to spawn that will show in the UI that represents the actor.
@@ -129,6 +129,10 @@ The template to spawn that will show in the UI that represents the actor.
 - PositionOffset
 
 Custom offset that may be needed to offset the actor from the spawned position.
+
+- Stance
+
+The stance to use for this actor.
 
 - Animation
 
@@ -145,5 +149,9 @@ If enabled, the animation will loop.
 - Audio
 
 The audio template to spawn when the entry is displayed.
+
+- StayDuration
+
+How long the message will display for before sliding out.
 
 --]]

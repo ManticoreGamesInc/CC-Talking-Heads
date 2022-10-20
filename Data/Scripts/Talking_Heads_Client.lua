@@ -15,7 +15,6 @@ local IN_CURVE = ROOT:GetCustomProperty("InCurve")
 local IN_DURATION = ROOT:GetCustomProperty("InDuration")
 local OUT_CURVE = ROOT:GetCustomProperty("OutCurve")
 local OUT_DURATION = ROOT:GetCustomProperty("OutDuration")
-local STAY_DURATON = ROOT:GetCustomProperty("StayDuraton")
 
 local WRITE_TEXT = ROOT:GetCustomProperty("WriteText")
 local TEXT_SPEED = ROOT:GetCustomProperty("TextSpeed")
@@ -68,10 +67,29 @@ local function parse_message(message)
 	return message
 end
 
+local function resize_panel(message)
+	local size = MESSAGE:ComputeApproximateSize()
+
+	while(size == nil) do
+		size = MESSAGE:ComputeApproximateSize()
+		Task.Wait()
+	end
+
+	PANEL.height = math.max(150, size.y)
+end
+
 local function display_message(message)
 	local txt = parse_message(message)
 
 	if(WRITE_TEXT) then
+		MESSAGE.visibility = Visibility.FORCE_OFF
+		MESSAGE.text = message
+
+		resize_panel(txt)
+
+		MESSAGE.text = ""
+		MESSAGE.visibility = Visibility.INHERIT
+
 		Task.Spawn(function()
 			for i = 1, string.len(txt) do
 				if(skip_writing and CAN_SKIP_WRITING) then
@@ -88,6 +106,7 @@ local function display_message(message)
 		end)
 	else
 		MESSAGE.text = txt
+		resize_panel(txt)
 	end
 end
 
@@ -117,7 +136,13 @@ local function play_talking_head(key, world_actor, world_delay)
 	local row = TALKING_HEADS[key]
 
 	if(row ~= nil) then
-		display_message(row.Message)
+		local message = row.Message
+
+		if(row.RandomMessages ~= nil) then
+			message = row.RandomMessages[math.random(#row.RandomMessages)].Message
+		end
+
+		display_message(message)
 
 		NAME.text = row.Name
 
@@ -172,7 +197,7 @@ local function play_talking_head(key, world_actor, world_delay)
 		end
 
 		Task.Spawn(function()
-			Task.Wait(STAY_DURATON)
+			Task.Wait(row.DisplayDuration or 6)
 			hide = true
 			Task.Wait(OUT_DURATION)
 			PANEL.visibility = Visibility.FORCE_OFF

@@ -43,10 +43,6 @@ The root of the template in the hierarchy has custom properties to customize the
 
 	The duration of the out animation.
 
-- **StayDuration**
-
-	The duration for how long an entry will stay out.
-
 - **WriteText**
 
 	If enabled, the text will be printed out 1 character at a time.
@@ -115,6 +111,10 @@ Below are what the columns are for.
 
 		Total deaths the player as.
 
+- **RandomMessages**
+
+A data table of random messages this actor will pick from.
+
 - **Actor**
 
 	The template to spawn that will show in the UI that represents the actor.
@@ -138,3 +138,7 @@ Below are what the columns are for.
 - **Audio**
 
 	The audio template to spawn when the entry is displayed.
+
+- **StayDuration**
+
+How long the message will display for before sliding out.
