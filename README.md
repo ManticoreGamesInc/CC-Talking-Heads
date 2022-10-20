@@ -141,12 +141,12 @@ A data table of random messages this actor will pick from.
 
 - **StayDuration**
 
-How long the message will display for before sliding out.
+	How long the message will display for before sliding out.
 
 - **PanelWidth**
 
-The width of the panel.
+	The width of the panel.
 
 - **PanelHeight**
 
-The height of the panel
+	The height of the panel
