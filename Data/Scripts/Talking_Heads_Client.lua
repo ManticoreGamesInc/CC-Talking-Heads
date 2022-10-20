@@ -44,6 +44,7 @@ local elapsed = 0
 local queue = Queue:new()
 local has_item = false
 local skip_writing = false
+local panel_height = PANEL.height
 
 _G.Talking_Head = ""
 
@@ -67,29 +68,10 @@ local function parse_message(message)
 	return message
 end
 
-local function resize_panel(message)
-	local size = MESSAGE:ComputeApproximateSize()
-
-	while(size == nil) do
-		size = MESSAGE:ComputeApproximateSize()
-		Task.Wait()
-	end
-
-	PANEL.height = math.max(150, size.y)
-end
-
 local function display_message(message)
 	local txt = parse_message(message)
 
 	if(WRITE_TEXT) then
-		MESSAGE.visibility = Visibility.FORCE_OFF
-		MESSAGE.text = message
-
-		resize_panel(txt)
-
-		MESSAGE.text = ""
-		MESSAGE.visibility = Visibility.INHERIT
-
 		Task.Spawn(function()
 			for i = 1, string.len(txt) do
 				if(skip_writing and CAN_SKIP_WRITING) then
@@ -106,7 +88,6 @@ local function display_message(message)
 		end)
 	else
 		MESSAGE.text = txt
-		resize_panel(txt)
 	end
 end
 
@@ -194,6 +175,14 @@ local function play_talking_head(key, world_actor, world_delay)
 			end
 		else
 			play_audio(row.Audio)
+		end
+
+		if(row.PanelHeight > 0) then
+			PANEL.height =  row.PanelHeight
+		end
+
+		if(row.PanelWidth > 0) then
+			PANEL.width =  row.PanelWidth
 		end
 
 		Task.Spawn(function()

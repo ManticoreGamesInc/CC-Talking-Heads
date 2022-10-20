@@ -154,4 +154,12 @@ The audio template to spawn when the entry is displayed.
 
 How long the message will display for before sliding out.
 
+- PanelWidth
+
+The width of the panel.
+
+- PanelHeight
+
+The height of the panel
+
 --]]
