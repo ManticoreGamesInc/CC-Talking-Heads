@@ -197,7 +197,7 @@ local function play_talking_head(key, world_actor, world_delay)
 		end
 
 		Task.Spawn(function()
-			Task.Wait(row.DisplayDuration or 6)
+			Task.Wait(row.DisplayDuration > 0 and row.DisplayDuration or 6)
 			hide = true
 			Task.Wait(OUT_DURATION)
 			PANEL.visibility = Visibility.FORCE_OFF
