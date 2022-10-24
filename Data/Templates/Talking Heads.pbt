@@ -1409,11 +1409,13 @@ Assets {
         }
         TemplateInstance {
           ParameterOverrideMap {
-            key: 1870515411822008052
+            key: 2819870385143110049
             value {
               Overrides {
-                Name: "cs:DisableTrigger"
-                Bool: false
+                Name: "cs:Actor"
+                ObjectReference {
+                  SubObjectId: 15846144444642726048
+                }
               }
             }
           }
@@ -1435,6 +1437,17 @@ Assets {
               Overrides {
                 Name: "Rotation"
                 Rotator {
+                }
+              }
+            }
+          }
+          ParameterOverrideMap {
+            key: 8241329955044019473
+            value {
+              Overrides {
+                Name: "cs:Actor"
+                ObjectReference {
+                  SubObjectId: 9020733563400925536
                 }
               }
             }

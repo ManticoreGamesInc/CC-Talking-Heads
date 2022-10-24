@@ -22,11 +22,12 @@ Assets {
           Overrides {
             Name: "cs:Actor"
             ObjectReference {
+              SelfId: 16256122773677031114
             }
           }
           Overrides {
             Name: "cs:Key"
-            String: ""
+            String: "Welcome"
           }
           Overrides {
             Name: "cs:DisableTrigger"
@@ -67,6 +68,54 @@ Assets {
           Overrides {
             Name: "cs:AnimationDelay:tooltip"
             String: "The delay of the animation."
+          }
+          Overrides {
+            Name: "cs:Actor:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Actor:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Key:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Key:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:DisableTrigger:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:DisableTrigger:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ResourceKey:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ResourceKey:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ResourceAmount:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ResourceAmount:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:AnimationDelay:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:AnimationDelay:ml"
+            Bool: false
           }
         }
         Collidable_v2 {

@@ -22,15 +22,16 @@ Assets {
           Overrides {
             Name: "cs:Actor"
             ObjectReference {
+              SelfId: 5134557136762248970
             }
           }
           Overrides {
             Name: "cs:Key"
-            String: ""
+            String: "Karl Laugh"
           }
           Overrides {
             Name: "cs:DisableTrigger"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "cs:ResourceKey"
@@ -42,7 +43,7 @@ Assets {
           }
           Overrides {
             Name: "cs:AnimationDelay"
-            Float: 0
+            Float: 1
           }
           Overrides {
             Name: "cs:Actor:tooltip"
@@ -67,6 +68,54 @@ Assets {
           Overrides {
             Name: "cs:AnimationDelay:tooltip"
             String: "The delay of the animation."
+          }
+          Overrides {
+            Name: "cs:Actor:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Actor:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Key:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Key:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:DisableTrigger:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:DisableTrigger:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ResourceKey:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ResourceKey:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ResourceAmount:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ResourceAmount:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:AnimationDelay:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:AnimationDelay:ml"
+            Bool: false
           }
         }
         Collidable_v2 {
